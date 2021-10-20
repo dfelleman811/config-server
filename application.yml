@@ -13,3 +13,4 @@ microservice:
   order-service:
     endpoint:
       uri: http://order-service/order/placeOrder
+message: This message came from the config server
