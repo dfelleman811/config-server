@@ -1,0 +1,23 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: order-service
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+# this is our client so we are setting register with eureka to true
+# and we also need to specify the url where we have our eureka server running
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
